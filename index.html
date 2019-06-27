@@ -7,46 +7,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     
     <title>Amar2050</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Amar2050</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-danger" href="#">Amar2050</a>
+        <button class="navbar-toggler collapsed" onclick="dynamicNav()" type="button" data-toggle="collapse" data-target="#NavBarHamburger"
+            aria-controls="NavBarHamburger" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <div class="navbar-collapse collapse" id="navbarColor01">
+        <div class="navbar-collapse collapse" id="NavBarHamburger">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#">Acceuil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Qui suis-je ?</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#">Qui suis-je ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mes réalisations</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#">Mes réalisations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contactez-moi</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#">Contactez-moi</a>
                 </li>
             </ul>
 
         </div>
     </nav>
-    <header>
-        <h1 class="text-center">Full Stack Web Developper</h1>
+    <header class="container-fluid d-flex flex-column justify-content-center">
+        <h1 class="text-center text-white ">Full Stack Web Developper</h1>
 
     </header>
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link " data-toggle="tab" href="#technos">Technos</a>
+                <a class="nav-link text-danger" data-toggle="tab" href="#technos">Technos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active " data-toggle="tab" href="#langages">Langages</a>
+                <a class="nav-link active text-danger" data-toggle="tab" href="#langages">Langages</a>
             </li>
         </ul>
         <div id="myTabContent" class="tab-content">
