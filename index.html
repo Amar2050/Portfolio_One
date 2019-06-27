@@ -12,7 +12,7 @@
     <title>Amar2050</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a class="navbar-brand text-danger" href="#">Amar2050</a>
         <button class="navbar-toggler collapsed" onclick="dynamicNav()" type="button" data-toggle="collapse" data-target="#NavBarHamburger"
             aria-controls="NavBarHamburger" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                     <a class="nav-link" onclick="dynamicNav()" href="#">Acceuil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="dynamicNav()" href="#">Qui suis-je ?</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#about">Qui suis-je ?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" onclick="dynamicNav()" href="#">Mes réalisations</a>
@@ -41,7 +41,7 @@
         <h1 class="text-center text-white ">Full Stack Web Developper</h1>
 
     </header>
-    <div class="container">
+    <div class="container" id="about">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link text-danger" data-toggle="tab" href="#technos">Technos</a>
