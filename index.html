@@ -28,10 +28,10 @@
                     <a class="nav-link" onclick="dynamicNav()" href="#about">Qui suis-je ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="dynamicNav()" href="#">Mes réalisations</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#projects">Mes réalisations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="dynamicNav()" href="#">Contactez-moi</a>
+                    <a class="nav-link" onclick="dynamicNav()" href="#contact">Contactez-moi</a>
                 </li>
             </ul>
 
@@ -41,36 +41,71 @@
         <h1 class="text-center text-white ">Full Stack Web Developper</h1>
 
     </header>
-    <div class="container" id="about">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link text-danger" data-toggle="tab" href="#technos">Technos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active text-danger" data-toggle="tab" href="#langages">Langages</a>
-            </li>
-        </ul>
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade " id="technos">
-                <p>Technologies que j'utilise , je suis capable d'en apprendre d'autres aux besoins</p>
-                <ul>
-                    <li>WordPress</li>
-                    <li>Symfony 4</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </div>
-            <div class="tab-pane fade active show" id="langages">
-                <p>Langages que j'utilise , je suis capable d'en apprendre d'autres aux besoins</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>PhP</li>
-                    <li>SQL</li>
-                </ul>
+    <div class="container-fluid" >
+        
+        <!-- About -->
+        <div  id="about">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link text-danger" data-toggle="tab" href="#technos">Technos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-danger" data-toggle="tab" href="#langages">Langages</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade " id="technos">
+                    <p>Technologies que j'utilise , je suis capable d'en apprendre d'autres aux besoins</p>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Symfony 4</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade active show" id="langages">
+                    <p>Langages que j'utilise , je suis capable d'en apprendre d'autres aux besoins</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>PhP</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <!-- End About -->
+
+        <!-- Projects -->
+        <div id="projects" class="d-flex ">
+            <div class="jumbotron col-xl-4 m-1 text-center">
+                <h2 class="display-3">BET ASSET</h2>
+                <p class="lead">Réalisé sous WordPress avec un thème sur mesure, accompagnement client de A à Z </p>
+                <hr class="my-4">
+                <img src="./img/betassetscreen.png" alt="bet asset screenshot" class="img-fluid border">
+                <p class="lead m-1">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">En savoir-plus</a>
+                </p>
+            </div>
+
+            <div class="jumbotron col-xl-4 m-1 text-center">
+                <h2 class="display-3">Portfolio</h2>
+                <p class="lead">Portfolio réalisé from scratch , en HTMl5, CSS3, Javascript ainsi que Bootstrap</p>
+                <hr class="my-4">
+                <img src="./img/portfolioscreen.jpg" alt="this website screenshot" class="img-fluid border">
+                <p class="lead m-1">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">En savoir-plus</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- End Projects -->
         
+        <!-- Contact -->
+        <div id="contact">
+
+        </div>
+        <!-- End Contact -->
     </div>
 <script src="script.js"></script>
 </body>

@@ -1,6 +1,6 @@
 header {
     /* Photo by Fotis Fotopoulos on Unsplash */
-	background-image: url("unsplash.jpg");
+	background-image: url("./img/unsplash.jpg");
 	background-position: center;
     background-size: cover;
 	height:80vh;
