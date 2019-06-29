@@ -7,7 +7,7 @@ function dynamicNav() {
     }
 }
 // To do : finish the function to show tab by replacing active into tab who is click 
-function tabsDisplay() {
-    var tabSelected = document.getElementById("NavBarHamburger");
+// function tabsDisplay() {
+//     var tabSelected = document.getElementById("NavBarHamburger");
     
-}
+// }
