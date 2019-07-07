@@ -54,7 +54,7 @@
             <!-- Nav Tabs -->
                 <ul class="nav nav-tabs d-flex justify-content-center " role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active  text-danger" onclick="" data-toggle="tab" href="#personnal">Qui-suis-Je ?</a>
+                        <a class="nav-link active  text-danger" onclick="" data-toggle="tab" href="#personnal">Hard & Soft Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-danger" onclick="" data-toggle="tab" href="#technos">Technos</a>
@@ -68,8 +68,10 @@
                 <div class="tab-content pt-3 pb-3 ">
                     
                     <div id="personnal" class="container active tab-pane text-center "><br>
+                        <h5 class="text-center">Hard Skills</h5>
                         <p>Titre Professionnel Nationale de Niveau 3 équivalent BTS en tant
                         Developpeur web et web mobile Full Stack <br>+<br>Autodidaxie : Youtube, Udemy, CodeAcademy, OpenClassRooms...
+                        Certificats Obtenus
                         </p>
                         <h5 class="text-center">Soft Skills</h5>
                         <ul>
@@ -109,7 +111,7 @@
 
         <!-- Projects -->
             <div id="projects" class=" project-bg bg-danger mt-5 mb-5 pb-2 pt-2 d-flex  justify-content-center align-item-center">
-                    <div class="pb-5 pt-5 mt-0 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto bg-primary   ">
+                    <div class=" border rounded shadow pb-5 pt-5 mt-0 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-5 m-auto bg-primary   ">
                         <h2 class="text-white text-center mb-5 ">Mes Réalisations</h2>
                         <!-- Carousel Projects picture -->
                         <div class="bd-example">
@@ -123,8 +125,8 @@
                                         <img src="./img/betassetscreen.png" class="d-block w-100" alt="bet asset screenshot">
                                         <div class="carousel-caption text-danger bg-dark">
                                             <a href="">
-                                            <h3 class="text-danger">BET ASSET</h3>
-                                            <p class="text-danger">WordPress, création d'un thème sur mesure</p>
+                                            <h3 class="text-white">BET ASSET</h3>
+                                            <p class="text-white">WordPress, création d'un thème sur mesure</p>
                                             </a>
                                         </div>
                                     </div>
@@ -132,8 +134,8 @@
                                         <img src="./img/portfolioscreen.jpg" class="d-block w-100" alt="this website screenshot">
                                         <div class="carousel-caption text-danger bg-dark">
                                             <a href="">
-                                            <h3 class="text-danger">Mon Portfolio</h3>
-                                            <p class="text-danger">From Scratch</p>
+                                            <h3 class="text-white">Mon Portfolio</h3>
+                                            <p class="text-white">From Scratch</p>
                                             </a>
                                         </div>
                                     </div>
@@ -153,11 +155,34 @@
         <!-- End Projects -->
             
         <!-- Contact -->
-            <div id="contact">
+            <div id="contact" class="pt-5 pb-5">
+                <h2 class="text-center mb-5">Contactez-moi</h2>
+                <form class="border rounded shadow pb-5 pt-5 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center" action="contactform.php" method="post">
 
+                    <label for="name" class="text-danger">Nom</label>
+                    <input class="form-control text-center" type="text" id="name" name="name" placeholder="Prénom et nom de famille">
+                    
+                    <label for="email" class="text-danger p-1">E-mail</label>
+                    <input class="form-control text-center p-2" type="email" id="email" name="mail" placeholder="Votre e-mail">
+                    
+                    <label for="subject" class="text-danger p-1">Sujet</label>
+                    <input class="form-control text-center p-2" type="text" id="subject" name="subject" placeholder="Le sujet de votre message">
+                    
+                    <label for="message" class="text-danger p-1">Message</label>
+                    <textarea class="form-control text-center p-2" type="text" name="message" placeholder="Ici, écrivez votre message"></textarea><br>
+                    
+                    <button type="submit" class="btn btn-success">Envoyez</button>
+                </form>
             </div>
         <!-- End Contact -->
     </div>
+    <footer>
+        <footer class="bg-primary text-center text-white p-4">
+            <p>© Copyright 2019 <a href="https://www.linkedin.com/in/amar-boutayeb-920369177/" class="text-danger">Amar2050</a>
+            </p>
+            
+        </footer>
+    </footer>
 <script src="script.js"></script>
 </body>
 </html>
