@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 header {
     /* Photo by Fotis Fotopoulos on Unsplash */
 	background-image: url("./img/unsplash.jpg");
