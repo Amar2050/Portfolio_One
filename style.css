@@ -4,7 +4,7 @@ html {
 header {
     /* Photo by Fotis Fotopoulos on Unsplash */
 	background-image: url("./img/unsplash.jpg");
-	background-position: center center ;
+	background-position: center center;
 	background-size: cover;
 	background-attachment: fixed;
 	height:90vh;
@@ -17,4 +17,23 @@ header {
 	background-size: cover;
 	background-attachment: fixed;
 	height:110vh;
+}
+strong{
+	font-weight: normal;
+}
+.iconb{
+	font-size: 2em;
+}
+
+.listBW:hover{
+	color:white;
+	background: #1a1a1a;
+}
+.grow { 
+	transition: all .5s ease-in-out;
+}
+.grow:hover{ 
+	transform: scale(0.95);
+	border-radius: 20%;
+	border: solid 2px #4BBF73;
 }
