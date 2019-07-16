@@ -72,7 +72,7 @@
                     <div id="personnal" class="container active tab-pane text-center"><br>
                         <h5 class="text-center">Hard Skills</h5>
                         <p><i class="fas fa-award text-info"></i> Titre Professionnel Nationale Niveau 3 (BTS/BAC+2) en tant
-                        Developpeur web et web mobile Full Stack <br>+<br>Autodidaxie : Youtube, Udemy, CodeAcademy, OpenClassRooms...
+                        Developpeur web et web mobile Full Stack <br>+<br>Autodidaxie : Youtube, Udemy, Sololearn, OpenClassRooms...
                         <br><i class="fas fa-award text-info"></i> Certificats Obtenus 
                         <br>(visibles sur Linkedin <a href="https://www.linkedin.com/in/amar-boutayeb-920369177/" target="_blank"><i class="fab fa-linkedin"></i></a>)
                         </p>
@@ -310,19 +310,19 @@
         <!-- Contact -->
             <div id="contact" class="pt-5 pb-5">
                 <h2 class="text-center mb-5">Contactez-moi</h2>
-                <form class="border rounded shadow pb-5 pt-5 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center" action="contactform.php" method="post">
+                <form class="border rounded shadow pb-5 pt-5 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center" action="contactForm.php" method="post">
 
-                    <label for="name" class="text-danger">Nom</label>
-                    <input class="form-control text-center" type="text" id="name" name="name" placeholder="Prénom et nom de famille">
+                    <label for="name" class="text-danger">Nom *</label>
+                    <input class="form-control text-center" type="text" id="name" name="name" placeholder="Votre prénom et nom de famille"required>
                     
-                    <label for="email" class="text-danger p-1">E-mail</label>
-                    <input class="form-control text-center p-2" type="email" id="email" name="mail" placeholder="Votre e-mail">
+                    <label for="email" class="text-danger p-1">E-mail *</label>
+                    <input class="form-control text-center p-2" type="email" id="email" name="mail" placeholder="Votre e-mail"required>
                     
-                    <label for="subject" class="text-danger p-1">Sujet</label>
-                    <input class="form-control text-center p-2" type="text" id="subject" name="subject" placeholder="Le sujet de votre message">
+                    <label for="subject" class="text-danger p-1">Sujet *</label>
+                    <input class="form-control text-center p-2" type="text" id="subject" name="subject" placeholder="Le sujet de votre message"required>
                     
-                    <label for="message" class="text-danger p-1">Message</label>
-                    <textarea class="form-control text-center p-2" type="text" name="message" placeholder="Ici, écrivez votre message"></textarea><br>
+                    <label for="message" class="text-danger p-1">Message *</label>
+                    <textarea class="form-control text-center p-2" type="text" name="message" placeholder="Pensez à communiquer votre numéro de téléphone si vous souhaitez être rappelé"required></textarea><br>
                     
                     <button type="submit" class="btn btn-success">Envoyez</button>
                 </form>
@@ -337,6 +337,6 @@
             
         </p>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,18 +1,18 @@
 function dynamicNav() {
-    var x = document.getElementById("NavBarHamburger");
-    if (x.style.display === "block") 
+    var mobileNav = document.getElementById("NavBarHamburger");
+    if (mobileNav.style.display === "block") 
     {
-        x.style.display = "none";
+        mobileNav.style.display = "none";
     } 
     else 
     {
-        x.style.display = "block";
+        mobileNav.style.display = "block";
     }
 }
 function closingNav() {
-    var x = document.getElementById("NavBarHamburger");
-    if (x.style.display === "block") 
+    var mobileNav = document.getElementById("NavBarHamburger");
+    if (mobileNav.style.display === "block") 
     {
-        x.style.display = "none";
+        mobileNav.style.display = "none";
     }
 }
