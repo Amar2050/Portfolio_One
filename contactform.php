@@ -23,6 +23,7 @@
 require_once('functions.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    
     if(!mandatoriesFieldsAreSet()) {
         $errorFieldsUnset = "Tous les champs doivent être remplient correctement";
         echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
@@ -30,46 +31,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     }
 
     //Excluding all html code when creating variables
-
     $name = htmlspecialchars($_POST['name']);
     $subject = htmlspecialchars($_POST['subject']);
     $email = htmlspecialchars($_POST['mail']);
     $message = htmlspecialchars($_POST['message']);
     
-    
     $errors = array();
-
     //checking name
     if(strlen($name)<3) {
-        $errors[] = "Votre Nom est trop court";
-        // print_r($errors);
-        
+        $errors[] = "Votre Nom est trop court";      
     }
     // Excluding special char 
     else if (!preg_match('/^[a-zA-Z0-9\s]+$/', $name)) { 
         $errors[] = 'Nom ne peut etre qu\'en lettres, nombres et espaces';
-        // print_r($errors);
     }
-    
     //checking email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Email invalide';
-        // print_r($errors);
     }
-    
     //checking subject
     if(strlen($subject)<3) {
         $errors[] = 'Votre titre de sujet est trop court';
-        // print_r($errors);
-        
     }
-
     //checking message
     if(strlen($message)<3) {
         $errors[] = 'Votre message est trop court';
-        // print_r($errors);
     }
-
     foreach ($errors as $error) {
         echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
         <p<i class='fas fa-exclamation-triangle text-danger'></i></p>"."<p>".$error."</p>"."</div>";
