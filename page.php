@@ -76,7 +76,7 @@
                                 </ol>
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
-                                        <img src="./img/betassetscreen.png" class="d-block w-100" alt="bet asset screenshot">
+                                        <img src="./assets/img/betassetscreen.png" class="d-block w-100" alt="bet asset screenshot">
                                         <div class="carousel-caption text-danger bg-dark grow">
                                             <!-- Button trigger modal -->
                                             <a data-toggle="modal" data-target="#betassetModal">
