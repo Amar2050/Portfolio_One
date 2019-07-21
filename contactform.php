@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $errorFieldsUnset = "Tous les champs doivent être remplient correctement";
         echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
         <p<i class='fas fa-exclamation-triangle text-danger'></i></p>"."<p>".$errorFieldsUnset."</p>"."</div>";
+        header('Location: https://www.amar2050.com/#contact');
     }
 
     //Excluding all html code when creating variables
@@ -36,46 +37,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $email = htmlspecialchars($_POST['mail']);
     $message = htmlspecialchars($_POST['message']);
     
+    $errorName = true;
+    $errorSubject = true;
+    $errorMessage = true;
     $errors = array();
     //checking name
     if(strlen($name)<3) {
-        $errors[] = "Votre Nom est trop court";      
+        $errors[] = "Votre Nom est trop court";
+        header('Location: https://www.amar2050.com/#contact');
+        $errorName = false;
+        return $errorName;
     }
     // Excluding special char 
     else if (!preg_match('/^[a-zA-Z0-9\s]+$/', $name)) { 
         $errors[] = 'Nom ne peut etre qu\'en lettres, nombres et espaces';
+        header('Location: https://www.amar2050.com/#contact');
+        $errorName = false;
+        return $errorName;
     }
     //checking email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Email invalide';
+        header('Location: https://www.amar2050.com/#contact');
     }
     //checking subject
     if(strlen($subject)<3) {
         $errors[] = 'Votre titre de sujet est trop court';
+        header('Location: https://www.amar2050.com/#contact');
+        $errorSubject = false;
+        return $errorName;
     }
     //checking message
     if(strlen($message)<3) {
         $errors[] = 'Votre message est trop court';
+        header('Location: https://www.amar2050.com/#contact');
+        $errorMessage = false;
+        return $errorName;
     }
-    foreach ($errors as $error) {
-        echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
-        <p<i class='fas fa-exclamation-triangle text-danger'></i></p>"."<p>".$error."</p>"."</div>";
-        }
-    // If the message is longer than 70 char wrapping 
-    $message = wordwrap($message, 70, "\r\n");
-    // Enter your email , gmail seem doen't work create one with web provider and alias it 
     
-    $mailTo = "email@mail.fr";
-    $headers = "De: ".$email;
-    $txt = "Un email de ".$name.".\n\n".$message;
-    // mail($mailTo, $subject, $txt, $headers);
-    // if (mail($mailTo, $subject, $txt, $headers)){
-    //     echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
-    //     <p<i class='fas fa-smile-wink text-warning'></i></p>
-    //     <p>Votre message a été envoyé avec succès</p>
-    //     </div>";
-    // }
+    //Testing all good condition
+    // (!strlen($name)<3 && filter_var($email, FILTER_VALIDATE_EMAIL) && !strlen($subject)<3 && !strlen($message)<3)
+    if ( $errorName && $errorSubject && $errorMessage ){ 
+        // If the message is longer than 70 char wrapping 
+        $message = wordwrap($message, 70, "\r\n");  
+        $mailTo = "contact@amar2050.com";
+        $headers = "De: ".$email;
+        $txt = "Un email de la part de : ".$name."\n\n".$message.".\n\n"."Adresse email du formulaire : ".$email;
+        mail($mailTo, $subject, $txt, $headers);
+        echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
+        <p<i class='fas fa-smile-wink text-warning'></i></p>
+        <p class='text-success'>Message envoyé</p>
+        </div>";
+    }else {
+        foreach ($errors as $error) {
+            echo "<div class='border rounded shadow pt-2 pb-2 col-12 col-sm-10 col-md-7 col-lg-6 col-xl-6 m-auto text-center text-danger error-message'>
+            <p<i class='fas fa-exclamation-triangle text-danger'></i></p>"."<p>".$error."</p>"."</div>";
+            }
+    }
+        
 }
+    // if (!mail($mailTo, $subject, $txt, $headers) || strlen($name)<3 || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($subject)<3 || strlen($message)<3)
 
 ?>
 

@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Amar2050 - Web Developpeur Full Stack</title>
+    <meta name="description" content="Spécialiste en développement de site Web et Web Mobile ! Disponible sur Marseille et en remote sur toute la France, propulsons votre projet sur le net !"> <!-- Meta Description -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,10 +14,8 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./img/betassetscreen.png" />
-    
-    <title>Amar2050</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" href="./img/code.png"/>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
