@@ -41,3 +41,7 @@ strong{
 	margin-top: -4em ! important;
 	margin-bottom: 4em !important;
 }
+
+.correctionMargin {
+	margin-left: -1em;
+}

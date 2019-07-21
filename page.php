@@ -20,7 +20,7 @@
                 </ul>   
             <!-- Tab Panes -->
                 <div class="tab-content pt-3 pb-3">      
-                    <div id="personnal" class="container active tab-pane text-center"><br>
+                    <div id="personnal" class="container active tab-pane text-center correctionMargin"><br>
                         <h5 class="text-center">Hard Skills</h5>
                         <p><i class="fas fa-award text-info"></i> Titre Professionnel Nationale Niveau 3 (BTS/BAC+2) en tant
                         Developpeur web et web mobile Full Stack <br>+<br>Autodidaxie : Youtube, Udemy, Sololearn, OpenClassRooms...
