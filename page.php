@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./img/portfolioscreen.jpg" class="d-block w-100" alt="this website screenshot">
+                                        <img src="./assets/img/portfolioscreen.jpg" class="d-block w-100" alt="this website screenshot">
                                         <div class="carousel-caption text-danger bg-dark grow">
                                             <!-- Button trigger modal -->
                                             <a data-toggle="modal" data-target="#portfolioModal">
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./img/symfony.jpg" class="d-block w-100" alt="symfony logo">
+                                        <img src="./assets/img/symfony.jpg" class="d-block w-100" alt="symfony logo">
                                         <div class="carousel-caption text-danger bg-dark grow">
                                             <!-- Button trigger modal -->
                                             <a data-toggle="modal" data-target="#personalModal">
